@@ -41,7 +41,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * On the next screen, select the *From URL* tab, give your notebook a *name* and an optional *description*, provide the following URL as the *Notebook URL*, and choose the `Python 3.6` environment as the *Runtime*:
 
 ```bash
-https://raw.githubusercontent.com/Shivam6693/CP4D_workshop/master/Fraud_claim_use_case/fraud-prediction-model_z1EPe81ZI.ipynb
+https://raw.githubusercontent.com/Shivam6693/CP4D_workshop/master/Fraud_claim_use_case/Watson_OpenScale/fraud_claim_model_monitoring.ipynb
 ```
 
 ![Add notebook name and URL](doc/source/images/wml-add-name-and-url.png)
