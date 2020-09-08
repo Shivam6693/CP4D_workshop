@@ -50,7 +50,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ### 1. Import notebook to Cloud Pak for Data
 
-* In your project, either click the `Add to project +` button, and choose `Notebook`
+* In your project, click the `Add to project +` button, and choose `Notebook`
 
 ![Add notebook](doc/source/images/wml-1-add-asset.png)
 
