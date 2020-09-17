@@ -158,6 +158,6 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 {"input_data": [{"fields": ["PhoneService", "MultipleLines", "InternetService", "OnlineSecurity", "OnlineBackup", "DeviceProtection", "TechSupport", "StreamingTV", "StreamingMovies", "Contract", "PaperlessBilling", "PaymentMethod", "MonthlyCharges", "TotalCharges", "gender", "SeniorCitizen", "Partner", "Dependents", "tenure", "NATIONAL_ID", "CREDITCARD_NUMBER", "CREDITCARD_TYPE", "CREDITCARD_EXP"], "values": [["No", "No phone service", "DSL", "No", "No", "No", "No", "No", "No", "Month-to-month", "No", "Bank transfer (automatic)", 24.8, 24.8, "Male", 0, "No", "No", 1, "237-06-5928", 4111300000000410, "VISA", "18-Jun"]]}]}
 ```
 
-- Click the `Predict` button  and the model will be called with the input data. The results will display in the *Result* window. Scroll down to the bottom (Line #114) to see either a "Yes" or a "No" for Churn:
+- Click the `Predict` button  and the model will be called with the input data. The results will display in the *Result* window. Scroll down to the bottom (Line #120) to see either a "Yes" or a "No" for Churn:
 
-![Testing the deployed model](images/TestingDeployedModel.png)
+![Testing the deployed model](images/testingDeployedModel1.png)
