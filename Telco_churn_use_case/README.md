@@ -86,7 +86,7 @@ With the notebook open, you will notice:
 - Section `2.0 Add Dataset` will load the data set we will use to build out the machine learning model. In order to import the data into the notebook, we are going to use the code generation capability of Watson Studio.
    - Highlight the code cell shown in the image below by clicking it. Ensure you place the cursor below the commented line.
    - Click the 01/00 "Find data" icon in the upper right of the notebook to find the data asset you need to import.
-   - Choose the *Files* tab, and pick the virtualized data set that has all three joined tables (i.e. `User<xyz>.POLICIESCLAIMSCUSTOMERS`). Click `Insert to code` and choose `pandas DataFrame`.
+   - Choose the *Files* tab, and pick the virtualized data set that has all three joined tables (i.e. `User<xyz>.BILLINGPRODUCTSCUSTOMER_shape.csv`). Click `Insert to code` and choose `pandas DataFrame`.
 
 ![Add remote Pandas DataFrame](images/wml-4-add-dataframe.png)
 
@@ -155,18 +155,7 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 - To get to the built-in test tool, click on the Test tab. Click on the `Provide input data as JSON` icon and paste the following data under Body:
 
 ```json
-{
-	"input_data": [{
-		"fields": ["capital_gains", "capital_loss", "incident_hour_of_the_day", "number_of_vehicles_involved", "witnesses", "total_claim_amount", "policy_annual_premium", "insured_sex_FEMALE", "insured_sex_MALE", "insured_occupation_adm-clerical", "insured_occupation_armed-forces", "insured_occupation_craft-repair", "insured_occupation_exec-managerial", "insured_occupation_farming-fishing", "insured_occupation_handlers-cleaners", "insured_occupation_machine-op-inspct", "insured_occupation_other-service", "insured_occupation_priv-house-serv", "insured_occupation_prof-specialty", "insured_occupation_protective-serv", "insured_occupation_sales", "insured_occupation_tech-support", "insured_occupation_transport-moving", "insured_hobbies_chess", "insured_hobbies_cross-fit", "insured_hobbies_other", "incident_type_Multi-vehicle Collision", "incident_type_Parked Car", "incident_type_Single Vehicle Collision", "incident_type_Vehicle Theft", "collision_type_Front Collision", "collision_type_Rear Collision", "collision_type_Side Collision", "collision_type_Unknown", "incident_severity_Major Damage", "incident_severity_Minor Damage", "incident_severity_Total Loss", "incident_severity_Trivial Damage", "authorities_contacted_Ambulance", "authorities_contacted_Fire", "authorities_contacted_None", "authorities_contacted_Other", "authorities_contacted_Police"],
-		"values": [
-			[0, 0, 16, 1, 2, 100210, 1241.04, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
-			[0, 0, 6, 3, 2, 53730, 1437.53, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0],
-			[91900, 0, 22, 4, 0, 71760, 1083.01, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
-			[0, 0, 10, 1, 1, 70700, 1405.71, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1],
-			[0, 0, 16, 2, 2, 44110, 1403.9, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1]
-		]
-	}]
-}
+{"input_data": [{"fields": ["PhoneService", "MultipleLines", "InternetService", "OnlineSecurity", "OnlineBackup", "DeviceProtection", "TechSupport", "StreamingTV", "StreamingMovies", "Contract", "PaperlessBilling", "PaymentMethod", "MonthlyCharges", "TotalCharges", "gender", "SeniorCitizen", "Partner", "Dependents", "tenure", "NATIONAL_ID", "CREDITCARD_NUMBER", "CREDITCARD_TYPE", "CREDITCARD_EXP"], "values": [["No", "No phone service", "DSL", "No", "No", "No", "No", "No", "No", "Month-to-month", "No", "Bank transfer (automatic)", 24.8, 24.8, "Male", 0, "No", "No", 1, "237-06-5928", 4111300000000410, "VISA", "18-Jun"]]}]}
 ```
 
 - Click the `Predict` button  and the model will be called with the input data. The results will display in the *Result* window. Scroll down to the bottom (Line #114) to see either a "Yes" or a "No" for Churn:
