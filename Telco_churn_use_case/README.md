@@ -160,4 +160,4 @@ Cloud Pak for Data offers tools to quickly test out Watson Machine Learning mode
 
 - Click the `Predict` button  and the model will be called with the input data. The results will display in the *Result* window. Scroll down to the bottom (Line #120) to see either a "Yes" or a "No" for Churn:
 
-![Testing the deployed model](images/testingDeployedModel1.png)
+![Testing the deployed model](images/testingDeployedModel.png)
