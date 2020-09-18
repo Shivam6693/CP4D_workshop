@@ -11,10 +11,10 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Enable payload logging and performance monitor for subscribed assets
 * Enable Quality (Accuracy) monitor
 * Enable Fairness monitor
-* Score the Fraud claim prediction model using the Watson Machine Learning
+* Score the Customer churn prediction model using the Watson Machine Learning
 
 
-![architecture](doc/source/images/architecture.png)
+![architecture](screenshots/architecture.png)
 
 ## Flow
 
@@ -36,23 +36,23 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 * In your project, either click the `Add to project +` button, and choose `Notebook`
 
-![Add notebook](doc/source/images/wml-add-asset.png)
+![Add notebook](screenshots/wml-add-asset.png)
 
 * On the next screen, select the *From URL* tab, give your notebook a *name* and an optional *description*, provide the following URL as the *Notebook URL*, and choose the `Python 3.6` environment as the *Runtime*:
 
 ```bash
-https://raw.githubusercontent.com/Shivam6693/CP4D_workshop/master/Fraud_claim_use_case/Watson_OpenScale/fraud_claim_model_monitoring.ipynb
+https://raw.githubusercontent.com/Shivam6693/CP4D_workshop/master/Telco_churn_use_case/Watson_OpenScale/churn_model_monitoring.ipynb
 ```
 
-![Add notebook name and URL](doc/source/images/wml-add-name-and-url.png)
+![Add notebook name and URL](screenshots/wml-add-name-and-url.png)
 
 * When the Jupyter notebook is loaded and the kernel is ready then we can start executing cells.
 
-![Notebook loaded](doc/source/images/wml-3-notebook-loaded.png)
+![Notebook loaded](screenshots/wml-3-notebook-loaded.png)
 
 > **Important**: *Make sure that you stop the kernel of your notebook(s) when you are done, in order to conserve memory resources!*
 
-![Stop kernel](doc/source/images/JupyterStopKernel.png)
+![Stop kernel](screenshots/JupyterStopKernel.png)
 
 ## 2. Run the notebook
 
@@ -68,19 +68,19 @@ With the notebook open, you will notice:
 
 - Section `1.2 Install required packages` will install some of the libraries we are going to use in the notebook (many libraries come pre-installed on Cloud Pak for Data). Note that we upgrade the installed version of Watson Machine Learning Python Client. Ensure the output of the first code cell is that the python packages were successfully installed.
 
-![Install required packages](doc/source/images/wos-2-install-packages.png)
+![Install required packages](screenshots/wos-2-install-packages.png)
 
 - Section `2.0 Add Dataset` will load the data set we will use to build out the machine learning model. In order to import the data into the notebook, we are going to use the code generation capability of Watson Studio.
    - Highlight the code cell shown in the image below by clicking it. Ensure you place the cursor below the commented line.
    - Click the 01/00 "Find data" icon in the upper right of the notebook to find the data asset you need to import.
    - Choose the *Files* tab, and pick the virtualized data set that has all three joined tables (i.e. `User<xyz>.POLICIESCLAIMSCUSTOMERS_shaped.csv`). Click `Insert to code` and choose `pandas DataFrame`.
 
-![Add remote Pandas DataFrame](doc/source/images/wml-4-add-dataframe.png)
+![Add remote Pandas DataFrame](screenshots/wml-4-add-dataframe.png)
 
    - The code to bring the data into the notebook environment and create a Pandas DataFrame will be added to the cell.
    - Run the cell and you will see the first five rows of the dataset.
 
-![Generated code to handle Pandas DataFrame](doc/source/images/wml-5-generated-code-dataframe.png)
+![Generated code to handle Pandas DataFrame](screenshots/wml-5-generated-code-dataframe.png)
 
    - Continue to run the remaining cells in section 2 to explore and clean the data.
 
@@ -98,7 +98,7 @@ With the notebook open, you will notice:
    - We will store, score and deploy the linear SVC model using Watson Machine Learning
    - Run all the cells in section 4 to deploy the model.
 
-![Building the pipeline and model](doc/source/images/wml-6-build-pipeline-and-model.png)
+![Building the pipeline and model](screenshots/wml-6-build-pipeline-and-model.png)
 
 
 ## 3. Configure OpenScale in a Jupyter Notebook
@@ -112,7 +112,7 @@ Follow the instructions mentioned in the notebook
    - We will also perform initial payload logging to finally setup Quality Monitoring
    - Run all the cells in section 5 to configure the dashboard.
 
-![Configuring OpenScale dashboard using notebook](doc/source/images/wos-configuration.png)
+![Configuring OpenScale dashboard using notebook](screenshots/wos-configuration.png)
 
 ### Get transactions for Explainability
 
@@ -128,29 +128,29 @@ The *Insights Dashboard* provides an overview of the models that OpenScale is mo
 
 * Open the `Services` tab by clicking the icon in the upper right. Go to the `OpenScale` tile under the `AI` category and click `Open`:
 
-![Deploy OpenScale](doc/source/images/aios-deploy-service.png)
+![Deploy OpenScale](screenshots/aios-deploy-service.png)
 
 OpenScale will begin with the *Insights Dashboard*. This can contain tiles for many configured monitors. 
 
 * Click on the left-hand menu icon for `Insights`, and then choose the tile for the dashboard you have created :
 
-![OpenScale Insight Dashboard Tile Open](doc/source/images/OpenScaleInsightDashTileOpen.png)
+![OpenScale Insight Dashboard Tile Open](screenshots/OpenScaleInsightDashTileOpen.png)
 
 You will see the dashboard. The green indicates if it has passed the test and red indicated alerts. Alerts are configurable, based on thresholds for fairness outcomes which can be set and altered as desired.
 
 Click on the Quality to view the details.
 
-![OpenScale Monitors](doc/source/images/OpenScaledashboard.png)
+![OpenScale Monitors](screenshots/OpenScaledashboard.png)
 
 * By moving your mouse pointer over the graph, you can see the point. Click on spot to veiw the details.
 
-![OpenScale Qualit Detail](doc/source/images/OpenScaleQualityDetail.png)
+![OpenScale Qualit Detail](screenshots/OpenScaleQualityDetail.png)
 
 
 * Once you open the details page, you can see more information on the performance of the model.
 
-![OpenScale Quality ROC](doc/source/images/OpenScaleQualityROC.png)
+![OpenScale Quality ROC](screenshots/OpenScaleQualityROC.png)
 
 * Go back and check out the custom monitors that we created in the notebook
 
-![OpenScale custom_monitor](doc/source/images/OpenScalecustom_monitor.png)
+![OpenScale custom_monitor](screenshots/OpenScalecustom_monitor.png)
