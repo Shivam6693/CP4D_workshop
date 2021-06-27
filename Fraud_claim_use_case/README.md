@@ -1,6 +1,6 @@
 # Predict Fraud Auto Insurance claim using Watson Machine Learning and Jupyter Notebooks on Cloud Pak for Data
 
-In this Code Pattern, we use IBM Cloud Pak for Data to go through the whole data science pipeline to solve a business problem and predict customer churn using an Auto Insurance claims dataset. Cloud Pak for Data is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data as well as build and deploy machine learning and deep learning models.
+In this Code Pattern, we use IBM Cloud Pak for Data to go through the whole data science pipeline to solve a business problem and predict fraud claim using an Auto Insurance claims dataset. Cloud Pak for Data is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data as well as build and deploy machine learning and deep learning models.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
@@ -15,7 +15,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Flow
 
 1. User loads the Jupyter notebook into the Cloud Pak for Data platform.
-2.	Fraud claims dataset is loaded into the Jupyter Notebook as virtualized data after following the Data virtualization and Data refinery tutorial.
+2. Fraud claims dataset is loaded into the Jupyter Notebook as virtualized data after following the Data virtualization and Data refinery tutorial.
 3. Preprocess the data, build machine learning models and save to Watson Machine Learning on Cloud Pak for Data.
 4. Deploy a selected machine learning model into production on the Cloud Pak for Data platform and obtain a scoring endpoint.
 5. Test the deployed model using the scoring endpoint.
